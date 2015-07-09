@@ -16,3 +16,4 @@ filetype on
 autocmd Filetype html setlocal shiftwidth=2
 autocmd Filetype ruby setlocal shiftwidth=2
 autocmd Filetype javascript setlocal shiftwidth=4
+autocmd Filetype make setlocal noexpandtab shiftwidth=8
