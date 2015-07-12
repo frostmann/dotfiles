@@ -1,0 +1,15 @@
+#!/bin/sh
+case $(uname) in
+	CYGWIN*)
+		platform=windows
+		;;
+esac
+
+if [ -z "$platform" ]; then
+	echo "Could not determine platform"
+	exit 1
+fi
+
+for file in $(find "$platform/" -type f); do
+	cp -v $file ${file/$platform/~}
+done
